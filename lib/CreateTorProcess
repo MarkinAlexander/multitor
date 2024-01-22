@@ -74,8 +74,6 @@ function CreateTorProcess() {
 
   # shellcheck disable=SC2024
   sudo -u "$_arg_uname" tor -f "${_torrc_config}" \
-       --ExitNodes "{ru},{by},{kz},{md}" \
-       --StrictExitNodes 1 \
        --RunAsDaemon 1 \
        --CookieAuthentication 0 \
        --SocksPort "$_arg_socks" \
